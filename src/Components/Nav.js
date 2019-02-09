@@ -1,25 +1,19 @@
 import React from 'react'
 import '../css/index.css';
 import {
-    NavLink
+    Link
   } from 'react-router-dom'
 
 const Nav = (props) => {
 
-
-
-
-
 return (
         <nav className="main-nav">
             <ul>
-                <li><NavLink to="/Dogs" >Dogs</NavLink></li>
-                <li><NavLink to="/Cats" >Cats</NavLink></li>
-                <li><NavLink to="/Birds" >Birds</NavLink></li>
+                <li><Link to="/Dogs" onFocus={props.tag}>Dogs</Link></li>
+                <li><Link to="/Cats" onFocus={props.tag}>Cats</Link></li>
+                <li><Link to="/Birds" onFocus={props.tag}>Birds</Link></li>
             </ul>
-       
         </nav>
-
 )
 }
 

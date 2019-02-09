@@ -2,12 +2,12 @@ import React from 'react'
 import GalleryItem from '../Components/GalleryItem'
 import NotFound from './NotFound';
 
-const  Gallery = (props) => {
-
-    let results = props.data
-
-    console.log("go")
-
+const  results = (props) => {
+    if(!props.bool)
+    {
+        props.search(props.query)
+    }
+    let results = props.pics
     
     let handleData = () =>
     {
@@ -35,4 +35,4 @@ const  Gallery = (props) => {
     )
 }
 
-export default Gallery
+export default results
