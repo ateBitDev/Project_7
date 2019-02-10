@@ -17,10 +17,10 @@ return (
     <div className="photo-container">
     <h2>{props.title}</h2>
       <Switch>
-        <Route exact path="/" render={ () => <Gallery data={props.cats} query={"Cats"} search={props.search} />} />
-        <Route path="/Cats" render={ () => <Gallery  data={props.cats} query={"Cats"} search={props.search} />}/>
-        <Route path="/Dogs" render={ () => <Gallery data={props.dogs} query={"Dogs"} search={props.search} />}/>
-        <Route path="/Birds" render={ () => <Gallery data={props.birds} query={"Birds"} search={props.search} />} />
+        <Route exact path="/" render={ () => <Gallery bool={props.bool} data={props.cats} query={"Cats"} search={props.search} />} />
+        <Route path="/Cats" render={ () => <Gallery bool={props.bool}  data={props.cats} query={"Cats"} search={props.search} />}/>
+        <Route path="/Dogs" render={ () => <Gallery bool={props.bool} data={props.dogs} query={"Dogs"} search={props.search} />}/>
+        <Route path="/Birds" render={ () => <Gallery bool={props.bool} data={props.birds} query={"Birds"} search={props.search} />} />
         <Route exact path= "/:Search"  render={ ({match}) => <Results bool={props.bool} pics={props.pics}  query={match.params.Search} search={props.search} />}/>
         <Route  component={Code404} />
       </Switch>

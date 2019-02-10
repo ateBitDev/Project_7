@@ -25,7 +25,7 @@ const  results = (props) => {
     }
     else
     (
-        pics = <NotFound />
+        pics = <NotFound bool={props.bool}/>
     )
 
     return(

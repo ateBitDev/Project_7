@@ -25,7 +25,7 @@ const  Gallery = (props) => {
     }
     else
     (
-        pics = <NotFound />
+        pics = <NotFound bool={props.bool}/>
     )
 
     return(

@@ -84,7 +84,7 @@ performSearch = (query) =>
     this.setState({
       pics: response.data.photos.photo
     })
-    this.setState({search: true})
+    this.setState({search: true})    
     if (this.state.pics.length !== 0)
     {
       this.setState({query : query});
@@ -92,7 +92,7 @@ performSearch = (query) =>
     }
     else 
     {  
-      this.setState({title : "Loading..."});
+      this.setState({title : ""});
       this.setState({query : ""});
       }
 

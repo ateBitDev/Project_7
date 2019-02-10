@@ -1,11 +1,22 @@
 import React from 'react'
 
-const NotFound = () => {
+const NotFound = (props) => {
+
+    let isLoading = props.bool
+    let text;
+
+    if(isLoading)
+    {
+        text = "No Results" 
+    }
+    else
+    {
+        text = "Loading..."    
+    }
 
     return (
         <li className="not-found">
-        <h3>No Results Found</h3>
-        <p>You search did not return any results. Please try again.</p>
+        <h3>{text}</h3>
     </li>
     )
 }
